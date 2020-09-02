@@ -7,29 +7,29 @@ prerequsits:
   1st module:
       Know your langauge.(JavaScript).
       firstweek-
-              Introduction to JavaScript
-              Language Basics 
-              Objects
-              Scope
-              Events
-              Strings
-              Numbers
-              Math
-              Arrays
-              Boolean
-              Comparisons
-              Conditions
-              Switch
-              Loops
-              Type Conversion
-              RegExp
-              Errors
-              Debugging
-              Hoisting
-              Strict Mode
-              Functions
-              Objects
-              Forms
-              HTML DOM
-              BOM
+              Introduction to JavaScript,
+              Language Basics, 
+              Objects,
+              Scope,
+              Events,
+              Strings,
+              Numbers,
+              Math,
+              Arrays,
+              Boolean,
+              Comparisons,
+              Conditions,
+              Switch,
+              Loops,
+              Type Conversion,
+              RegExp,
+              Errors,
+              Debugging,
+              Hoisting,
+              Strict Mode,
+              Functions,
+              Objects,
+              Forms,
+              HTML DOM,
+              BOM,
   
