@@ -32,4 +32,5 @@ prerequsits:
               Forms,
               HTML DOM,
               BOM,
+              For more informaation on JavaScript go to https://www.w3schools.com/js/js_whereto.asp
   
