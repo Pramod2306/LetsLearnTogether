@@ -7,7 +7,7 @@ prerequsits:
   1st module:
       Know your langauge.(JavaScript).
       firstweek-
-              Introduction to JavaScript,
+              Introduction to JavaScript (https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web),
               Language Basics, 
               Objects,
               Scope,
@@ -32,4 +32,5 @@ prerequsits:
               Forms,
               HTML DOM,
               BOM,
+              For more informaation on JavaScript go to https://www.w3schools.com/js/js_whereto.asp
   
