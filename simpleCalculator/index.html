@@ -61,12 +61,14 @@
   </div>
   <div>
       <script>
-          let input=0;
+          
+          
+let input=0;
 let firstvariable=0;
 let secondvariable=0;
 let answer=0;
 let operator;
-
+*/this getinput function will get input from user or this function is called everytime you press the number.*/ 
 let getInput=(value)=>
 {
   if(input<=0)
@@ -81,7 +83,7 @@ let getInput=(value)=>
 }
 
 
-
+*/this function is called everytime you press the operator*/
 let operation=(operators)=>
 {
   operator=operators;
@@ -103,7 +105,7 @@ let operation=(operators)=>
     }
 }
 
-
+*/this function is called when you press the "=" */
 let calculation=()=>{
   secondvariable=parseInt(input);
   console.log("firstvariable=",firstvariable);
@@ -131,7 +133,7 @@ let calculation=()=>{
       break;
   }
 }
-
+*/this function helps to continue the operation*/
 let continueOperation=(answer)=>{
   firstvariable=answer;
   secondvariable=0;
