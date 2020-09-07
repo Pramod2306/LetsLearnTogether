@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        .calculator-body{
+           height:200px;
+           width:300px;
+           border:1px solid lightgreen;
+           
+        }
+        #grid{
+            margin:2px 10px 2px 20px;
+        }
+        #text{
+            border:1px solid black;
+            height:30px;
+            width:81%;
+            margin:20px 0px 0px 20px;
+            overflow-x:hide;
+            text-align: right;
+            padding:4px;
+        }
+        .button{
+            width:60px;
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-body">
+  <p id="text"></p>
+  <div id="grid">
+    <div>
+      <button class="button"  value="1" onclick="getInput('1')">1</button>
+      <button  class="button" value="2"  onclick="getInput('2')">2</button>
+      <button  class="button" value="3"  onclick="getInput('3')">3</button>
+      <button  class="button" value="9" onclick="reset()">c</button>
+      
+    </div>
+    <div>
+      <button class="button"  value="4" onclick="getInput('4')">4</button>
+      <button  class="button" value="5" onclick="getInput('5')">5</button>
+      <button  class="button" value="6" onclick="getInput('6')">6</button>
+      <button class="button"  onclick="operation('*')">*</button>
+    </div>
+    <div>
+      <button  class="button" value="7" onclick="getInput('7')">7</button>
+      <button  class="button" value="8" onclick="getInput('8')">8</button>
+      <button  class="button" value="9" onclick="getInput('9')">9</button>
+      <button  class="button" onclick="operation('/')">/</button>
+    </div>
+    <div>
+      <button  class="button" value="0" onclick="getInput('0')">0</button>
+      <button  class="button" value="+" onclick="operation('+')">+</button>
+      <button  class="button"   onclick="operation('-')">-</button>
+      <button class="button"  onclick="calculation()">=</button>
+    </div>
+  </div>
+  <div>
+      <script>
+          let input=0;
+let firstvariable=0;
+let secondvariable=0;
+let answer=0;
+let operator;
+
+let getInput=(value)=>
+{
+  if(input<=0)
+    {
+      input=value;
+    }
+  else
+    {
+     input=input.concat(value);
+    }
+  document.getElementById("text").innerHTML=input;
+}
+
+
+
+let operation=(operators)=>
+{
+  operator=operators;
+  if(operator==='+'||operator==='*'||operator==='-'||operator==='/' )
+    {
+      if(firstvariable===0)
+        {
+          firstvariable=parseInt(input);
+          input=0;
+          
+        }
+      else
+        {
+          
+          secondvariable=parseInt(input);
+          document.getElementById("text").innerHTML=" ";
+          
+        }
+    }
+}
+
+
+let calculation=()=>{
+  secondvariable=parseInt(input);
+  console.log("firstvariable=",firstvariable);
+  console.log("secondvariable=",secondvariable);
+  switch(operator){
+    case '+':
+      answer=firstvariable+secondvariable;
+      continueOperation(answer);
+      console.log(answer);
+      break;
+      case '-':
+      answer=firstvariable-secondvariable;
+      continueOperation(answer);
+      break;
+      case '*':
+      answer=firstvariable * secondvariable;
+      continueOperation(answer);
+      break;
+      case '/':
+      answer=firstvariable / secondvariable;
+      continueOperation(answer);
+      break;
+    default:
+      document.getElementById("text").innerHTML="ERROR";
+      break;
+  }
+}
+
+let continueOperation=(answer)=>{
+  firstvariable=answer;
+  secondvariable=0;
+  input=0;
+  document.getElementById("text").innerHTML=answer;
+}
+let reset=()=>{
+  firstvariable=0;
+  secondvariable=0;
+  answer=0;
+  input=0;
+  document.getElementById("text").innerHTML=" ";
+  
+}
+
+      </script>
+</body>
+</html>
